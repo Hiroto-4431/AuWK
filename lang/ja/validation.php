@@ -156,6 +156,12 @@ return [
     'attributes' => [
         'name' => '名前',
         'email' => 'メールアドレス',
+        'authentication_email' => '大学メールアドレス',
+        'birthday' => '誕生日',
+        'birthday_year' => '誕生日の年',
+        'birthday_month' => '誕生日の月',
+        'birthday_date' => '誕生日の日',
+        'gender' => '性別',
         'password' => 'パスワード',
     ],
 
