@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\Auth\PasswordController;
 use App\Http\Controllers\Admin\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Admin\Auth\RegisteredUserController;
 use App\Http\Controllers\Admin\Auth\VerifyEmailController;
+use App\Http\Controllers\Admin\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -80,4 +81,10 @@ Route::middleware('auth:admins')->group(function () {
 
     Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->name('logout');
+
+    Route::resource('user', UserController::class);
+    Route::prefix('expired-user')->group(function() {
+        Route::get('index', [UserController::class, 'expiredUserIndex'])->name('expired-user.index');
+        Route::post('destroy/{expiredUser}', [UserController::class, 'expiredUserDestroy'])->name('expired-user.destroy');
+    });
 });
