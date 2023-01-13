@@ -63,7 +63,8 @@ class DepartmentSeeder extends Seeder
             ],
             [
                 'name' => '薬学部',
-            ],[
+            ],
+            [
                 'name' => '歯学部',
             ],
             [
@@ -98,6 +99,9 @@ class DepartmentSeeder extends Seeder
             ],
             [
                 'name' => '音楽学部',
+            ],
+            [
+                'name' => 'その他',
             ],
         ]);
     }

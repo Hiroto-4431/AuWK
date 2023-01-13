@@ -13,7 +13,7 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     <body class="font-sans antialiased min-h-screen bg-gray-100">
-        {{-- <div class="min-h-screen bg-gray-100"> --}}
+        <div class="min-h-screen bg-gray-100">
             {{-- @if(auth('admins')->user())
                 @include('layouts.admin-navigation')
             @elseif(auth('users')->user())
@@ -35,6 +35,11 @@
                     @include('layouts.admin-navigation')
                     @include('layouts.admin-content')
                     {{-- {{ $slot }} --}}
+                </div>
+            @elseif(auth('users')->user())
+                <div class="min-h-screen flex">
+                    @include('layouts.user-navigation')
+                    @include('layouts.user-content')
                 </div>
             @endif
             
