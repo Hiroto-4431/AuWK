@@ -15,3 +15,5 @@
         </div>
     </div>
 </x-app-layout>
+{{--  --}}
+{{-- <a href="{{route('profile')}}">プロフィール編集</a> --}}
